@@ -3,7 +3,8 @@ import wollok.game.*
 object pachamama {
 	var nivelDeAgradecimiento = 10
 	var property position = game.origin()
-	var property image = "pachamama-agradecida.png"
+	
+	method image()=if(self.estaAgradecida())"pachamama-agradecida.png" else "pachamama_enojada_opt.png"
 	
 	method llover(){
 		nivelDeAgradecimiento += 5
@@ -23,5 +24,6 @@ object pachamama {
 	
 	method estaAgradecida() = nivelDeAgradecimiento >= 10
 	
+
 	
 }

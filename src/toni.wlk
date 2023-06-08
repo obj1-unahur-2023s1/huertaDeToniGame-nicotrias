@@ -36,6 +36,8 @@ object toni {
 	
 	method monedas()= monedas
 	
+	method cantidadPlantasCosechadas()= plantasCosechadas.size()
+	
 	method paraCuantosDiasLeAlcanza(){
 		return (monedas + self.valorDeCosecha()).div(200) 
 	}
